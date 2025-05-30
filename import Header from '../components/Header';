@@ -1,0 +1,22 @@
+import Footer from '../components/Footer';
+
+const Home = () => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <section className="text-center py-20 bg-blue-500 text-white">
+          <h1 className="text-4xl mb-4">Welcome to Habito</h1>
+          <p className="max-w-xl mx-auto">Track your habits and achieve your goals with Habito. Start today!</p>
+        </section>
+        <section className="py-20">
+          <h2 className="text-3xl text-center mb-10">Features</h2>
+          {/* Here we will list the features */}
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;
