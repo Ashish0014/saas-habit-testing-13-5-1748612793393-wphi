@@ -1,0 +1,29 @@
+import { Link } from 'react-router-dom';
+
+const Header = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <header className="flex justify-between p-5 bg-blue-500 text-white">
+      <Link to="/" className="font-semibold text-xl">Habito</Link>
+      <nav>
+        <ul className="flex space-x-4">
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/login">Login</Link></li>
+          <li><Link to="/signup">Sign Up</Link></li>
+          <li>
+            <button onClick={toggleTheme}>
+              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
