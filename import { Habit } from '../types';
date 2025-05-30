@@ -1,0 +1,17 @@
+interface Props {
+  habit: Habit;
+}
+
+const HabitCard = ({ habit }: Props) => {
+  return (
+    <div className="p-4 bg-white rounded shadow-md">
+      <h3 className="text-xl font-bold">{habit.name}</h3>
+      <p>{habit.description}</p>
+      <div className="mt-2">
+        <span>Status: {habit.status}</span>
+      </div>
+    </div>
+  );
+};
+
+export default HabitCard;
